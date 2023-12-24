@@ -1,49 +1,17 @@
 [
-    {
-      "question": "Explain the concept of 'p-value' in statistics and its significance in hypothesis testing.",
-      "type": "Technical",
-      "answer/intent": "The p-value is the probability of obtaining results as extreme or more extreme than the observed results under the assumption that the null hypothesis is true. A lower p-value suggests stronger evidence against the null hypothesis."
-    },
-    {
-      "question": "Describe a situation where you applied clustering techniques in a data analysis project.",
-      "type": "Technical",
-      "answer/intent": "I applied clustering to group similar data points together based on certain features. For example, in customer segmentation, I used k-means clustering to identify distinct customer groups. Keywords: clustering techniques, grouping, k-means clustering."
-    },
-    {
-      "question": "How do you handle imbalanced datasets in machine learning, and why is it important?",
-      "type": "Technical",
-      "answer/intent": "I handle imbalanced datasets by using techniques like oversampling, undersampling, or using algorithms that handle imbalanced classes. It's important because imbalanced datasets can lead to biased models, and these techniques help in achieving better model performance. Keywords: imbalanced datasets, oversampling, undersampling, biased models."
-    },
-    {
-      "question": "Tell me about a time when you had to prioritize tasks in a data analysis project to meet tight deadlines.",
-      "type": "Behavioral",
-      "answer/intent": "The intent behind this question is to assess the candidate's ability to prioritize tasks effectively in a time-sensitive environment. Look for keywords such as prioritize tasks, impact on goals, and tight deadlines."
-    },
-    {
-      "question": "Explain the importance of cross-validation in machine learning and how it works.",
-      "type": "Technical",
-      "answer/intent": "Cross-validation is important for assessing a model's performance on multiple subsets of the data. It works by splitting the dataset into training and testing sets multiple times, allowing for a more robust evaluation of the model. Keywords: cross-validation, model performance, training set, testing set."
-    },
+
     {
       "question": "How do you stay updated on the latest trends in data analytics and machine learning?",
       "type": "Behavioral",
       "answer/intent": "The intent behind this question is to understand the candidate's approach to continuous learning in a rapidly evolving field. Look for keywords such as stay updated, research papers, reputable blogs, and online communities."
     },
-    {
-      "question": "Describe a project where you had to extract, transform, and load (ETL) data from various sources.",
-      "type": "Technical",
-      "answer/intent": "I worked on a project where I extracted data from multiple databases, transformed it to a common format, and loaded it into a centralized data warehouse. This ensured a unified and accessible data source for analysis. Keywords: ETL, extract, transform, load, data warehouse."
-    },
+
     {
       "question": "How do you approach explaining complex data findings to non-technical stakeholders?",
       "type": "Behavioral",
       "answer/intent": "The intent behind this question is to evaluate the candidate's communication skills and ability to convey complex information to non-technical stakeholders. Look for keywords such as explain complex data, visualizations, storytelling, and business impact."
     },
-    {
-      "question": "In what situations would you use a box plot, and what information does it provide?",
-      "type": "Technical",
-      "answer/intent": "I would use a box plot to visualize the distribution of a dataset and identify outliers. It provides information about the median, quartiles, and potential skewness or outliers in the data. Keywords: box plot, distribution, outliers, median, quartiles."
-    },
+
     {
       "question": "How do you contribute to creating a positive and collaborative team environment?",
       "type": "Cultural Fit",

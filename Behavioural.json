@@ -1,0 +1,27 @@
+[
+  {
+    "question": "How do you stay updated on the latest trends in data analytics and machine learning?",
+    "type": "Behavioral",
+    "answer/intent": "The intent behind this question is to understand the candidate's approach to continuous learning in a rapidly evolving field. Look for keywords such as stay updated, research papers, reputable blogs, and online communities."
+  },
+  {
+    "question": "How do you approach explaining complex data findings to non-technical stakeholders?",
+    "type": "Behavioral",
+    "answer/intent": "The intent behind this question is to evaluate the candidate's communication skills and ability to convey complex information to non-technical stakeholders. Look for keywords such as explain complex data, visualizations, storytelling, and business impact."
+  },
+  {
+    "question": "How do you handle missing or incomplete data in a dataset, and what impact can it have on your analysis?",
+    "type": "Behavioral",
+    "answer/intent": "This question assesses the candidate's data preprocessing skills and their understanding of the implications of missing data. Look for responses that mention techniques like imputation, analysis of missing data patterns, and an awareness of potential biases introduced by missing data."
+  },
+  {
+    "question": "Describe a real-world scenario where you had to deal with a large dataset. How did you approach handling and analyzing it efficiently?",
+    "type": "Behavioral",
+    "answer/intent": "This question assesses the candidate's practical experience with large datasets and their ability to manage and analyze data efficiently. Look for responses that mention tools or frameworks used for handling large datasets, strategies for optimizing performance, and any challenges faced during the process."
+  },
+  {
+    "question": "Can you provide an example of a data visualization you created to uncover meaningful insights, and how did it contribute to the overall understanding of the data?",
+    "type": "Behavioral",
+    "answer/intent": "This question assesses the candidate's data visualization skills and their ability to communicate insights effectively. Look for details on the choice of visualization tools, the story conveyed through the visualization, and the impact it had on decision-making or understanding the dataset."
+  }
+]

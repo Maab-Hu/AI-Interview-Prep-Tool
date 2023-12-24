@@ -1,0 +1,27 @@
+[
+  {
+    "question": "Using the STAR format, describe a specific situation where you successfully implemented a machine learning model to solve a business problem. Outline the key tasks you undertook, actions you implemented, and the measurable results achieved.",
+    "type": "STAR",
+    "answer/intent": "This STAR question assesses the candidate's hands-on experience with machine learning in a business context. Look for responses that clearly present the Situation, Task, Action, and Result, highlighting their role, specific tasks performed, actions taken, and the measurable impact of the machine learning solution."
+  },
+  {
+    "question": "In a previous role, share a situation where you had to present complex data findings to a non-technical audience. Utilizing the STAR format, detail the specific tasks involved, actions you took, and the overall impact on stakeholder understanding and decision-making.",
+    "type": "STAR",
+    "answer/intent": "The intent behind this STAR question is to evaluate the candidate's communication skills and ability to convey complex information. Look for responses that structure their answer using the Situation, Task, Action, and Result framework, emphasizing the challenges faced, specific tasks performed, actions taken to simplify complex data, and the impact on stakeholder decision-making."
+  },
+  {
+    "question": "Describe a challenging data preprocessing task you encountered in a data analytics project, applying the STAR format. Outline the steps you took to address the challenge, your role in the task, and the impact on the overall data analysis.",
+    "type": "STAR",
+    "answer/intent": "This STAR question aims to assess the candidate's data preprocessing skills and problem-solving approach. Look for responses that clearly delineate the Situation, Task, Action, and Result, providing insights into the specific challenges faced, the candidate's role, actions taken to address the challenge, and the impact on the overall data analysis."
+  },
+  {
+    "question": "Using the STAR format, describe a scenario where you had to lead a data analytics project. Outline the key tasks you undertook, actions you implemented to ensure project success, and the measurable results achieved.",
+    "type": "STAR",
+    "answer/intent": "This STAR question evaluates the candidate's project leadership skills in a data analytics context. Look for responses that follow the Situation, Task, Action, and Result structure, highlighting the candidate's leadership role, specific tasks performed, actions taken to ensure project success, and the measurable results achieved."
+  },
+  {
+    "question": "Share an instance where you identified a critical error in a dataset during a data analysis project. Applying the STAR format, detail the Situation, the specific Tasks you performed to rectify the error, Actions you took, and the overall impact on the project outcomes.",
+    "type": "STAR",
+    "answer/intent": "This STAR question assesses the candidate's attention to detail and problem-solving skills when dealing with data errors. Look for responses that present a clear Situation, Task, Action, and Result, outlining the specific error identified, tasks performed to rectify it, actions taken, and the impact on the overall project outcomes."
+  }
+]

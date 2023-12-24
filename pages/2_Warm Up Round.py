@@ -14,21 +14,24 @@ from langchain.prompts.chat import (
 )
 from langchain.memory import ConversationBufferMemory
 from langchain.memory import ConversationBufferWindowMemory
-import json
+import json,time,random
 from templates import choose_template, extract_template, warmup_feedback_template, warm_up_question_template
+from utils import select_questions
 
 st.set_page_config(page_icon='rex.png', layout='wide')
-
-with open('dataset.json', 'r') as file:
-    data = json.load(file)
 
 st.title("Warm Up Round : Getting Comfortable with the Interview")
 
 category = st.selectbox("Which type of questions do you want to practice?",
-                        ['Technical', 'Behavioural', 'Culture Fit'])
+                        ['Technical', 'Behavioural', 'Culture Fit','STAR'],index=None)
 
 while category is None:
-    st.markdown('Please select question category')
+    st.info('Please select question category')
+    st.stop()
+
+if category:
+    data = select_questions(category=category)
+
 
 if not st.session_state.openai_key:
     st.info("Please add your API key to continue")
@@ -38,9 +41,13 @@ if not st.session_state["Resume Info"]:
     st.info("Please upload your Resume")
     st.stop()
 
+if not st.session_state["Job Description"]:
+    st.info("Please add your job description")
+    st.stop()
+
 os.environ['OPENAI_API_KEY'] = st.session_state.openai_key
 
-chat = ChatOpenAI(model_name='gpt-3.5-turbo', temperature=0.3)
+chat = ChatOpenAI(model_name='gpt-4', temperature=0.3)
 
 memory = ConversationBufferMemory()
 
@@ -140,12 +147,22 @@ if st.session_state.action == "Next" or "Repeat" and (
         extracts = extract_chain.run(history=st.session_state.questions, text="")
     else:
         extracts = "No previous Questions"
-    chosen_q = choose_chain.run(action=st.session_state.action, questions=extracts, data=data, text="",details=st.session_state["Resume Info"])
-    response = question_chain.run(question=chosen_q, history=st.session_state.history, text=inp, details=st.session_state["Resume Info"])
+
+    chosen_q = choose_chain.run(action=st.session_state.action, questions=extracts, data=data, text="",details=st.session_state["Resume Info"], description=st.session_state['Job Description'])
+    response = question_chain.run(question=chosen_q, history=st.session_state.history[-2:], text=inp, details=st.session_state["Resume Info"])
 
     with st.chat_message("assistant", avatar='rex.png'):
 
-        st.markdown(response)
+        message_placeholder = st.empty()
+        full_response = ""
+        for chunk in response.split():
+            full_response += chunk + " "
+            time.sleep(0.05)
+            # Add a blinking cursor to simulate typing
+            message_placeholder.markdown(full_response + "▌")
+        message_placeholder.markdown(full_response)
+
+        #st.markdown(response)
 
         st.session_state.action = "Feedback"
     st.session_state['warmup_message'].append({'role': 'interviewer', 'content': response})
@@ -156,10 +173,20 @@ if st.session_state.action == "Next" or "Repeat" and (
     st.stop()
 
 if st.session_state.warmup_message[-1]['role'] == "user" and st.session_state.action == "Feedback":
-    feedback = feedback_chain.run(question=question, response=inp, history=st.session_state.history[-4:], text=inp)
+    feedback = feedback_chain.run(question=question, response=inp, history=st.session_state.history[-2:], text=inp,asked=st.session_state.warmup_message[-2]['content'])
 
     with st.chat_message("assistant", avatar='rex.png'):
-        st.markdown(feedback)
+
+        message_placeholder = st.empty()
+        full_response = ""
+        for chunk in feedback.split():
+            full_response += chunk + " "
+            time.sleep(0.05)
+            # Add a blinking cursor to simulate typing
+            message_placeholder.markdown(full_response + "▌")
+        message_placeholder.markdown(full_response)
+
+        #st.markdown(feedback)
     st.session_state['warmup_message'].append({'role': 'feedback', 'content': feedback})
     memory.save_context({"input": inp}, {"output": feedback})
     st.session_state['history'].append(memory.buffer_as_messages[-2:])

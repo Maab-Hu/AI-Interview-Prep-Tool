@@ -1,0 +1,27 @@
+[
+  {
+    "question": "How do you contribute to creating a positive and collaborative team environment?",
+    "type": "Cultural Fit",
+    "answer/intent": "The intent behind this question is to assess the candidate's teamwork and collaboration skills. Look for keywords such as positive team environment, collaboration, and open communication."
+  },
+  {
+    "question": "Can you share an example of a time when you provided support or assistance to a team member facing challenges?",
+    "type": "Cultural Fit",
+    "answer/intent": "This question gauges the candidate's willingness to support team members in challenging situations. Look for responses that demonstrate empathy, teamwork, and a proactive attitude in helping others overcome challenges."
+  },
+  {
+    "question": "How do you handle disagreements or conflicts within a team, and what steps do you take to resolve them?",
+    "type": "Cultural Fit",
+    "answer/intent": "The intent behind this question is to evaluate the candidate's conflict resolution skills and approach to maintaining a positive team dynamic. Look for responses that emphasize open communication, active listening, and a constructive resolution process."
+  },
+  {
+    "question": "In what ways do you promote diversity and inclusion within a team or workplace?",
+    "type": "Cultural Fit",
+    "answer/intent": "This question assesses the candidate's commitment to fostering a diverse and inclusive work environment. Look for responses that highlight initiatives or actions taken to promote diversity, equity, and inclusion, both in and outside of work projects."
+  },
+  {
+    "question": "How do you celebrate team achievements and milestones, and why do you think it's important?",
+    "type": "Cultural Fit",
+    "answer/intent": "This question explores the candidate's perspective on acknowledging and celebrating team successes. Look for responses that emphasize the importance of recognizing achievements, fostering a positive team culture, and motivating team members."
+  }
+]
